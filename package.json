@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "style-dictionary build"
+    "clean:custom": "style-dictionary clean --config ./src/config/customConfig.js",
+    "build:custom": "pnpm clean:custom && style-dictionary build --config ./src/config/customConfig.js --verbose"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +14,8 @@
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "style-dictionary": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }
